@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.carto.plugin.sdk"
+        version="0.0.1">
+
+  <name>CartoMobileSDK</name>
+  <description>POC Cordova Implementation of CartoMobileSDK</description>
+
+  <engines>
+    <engine name="cordova" version=">=3.6.0" />
+  </engines>
+
+  <js-module src="www/mapview.js" name="MapView">
+    <clobbers target="MapView" />
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CDMapView">
+        <param name="android-package" value="com.carto.plugin.sdk.CDMapView" />
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+    <framework src="com.carto:carto-mobile-sdk:4.0.0-rc.2" />
+
+    <source-file src="src/android/CDMapView.java" target-dir="src/com/carto/plugin/mobile-sdk" />
+  </platform>
+
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="CDMapView">
+        <param name="ios-package" value="CDMapView" />
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+    
+    <framework src="CartoMobileSDK" type="podspec" spec="~> 4.0.0" compiler-flags="-std=c++11"/>
+
+    <header-file src="src/ios/CDMapView.h" />
+    <source-file src="src/ios/CDMapView.mm" />
+
+    <framework src="libz.tbd"/>
+    <framework src="GLKit.framework" />
+
+    <!-- <source-file src="src/ios/Frameworks/CartoMobileSDK.framework" framework="true" /> -->
+    <!-- <source-file src="src/ios/Frameworks/CartoMobileSDK.framework" compiler-flags="-std=c++11" /> -->
+    
+  </platform>
+
+</plugin>
