@@ -19,7 +19,7 @@ A general guide to installing cordova and creating a project can be found [here]
  * `mapView` is a html element, e.g. `<div class="mapView"></div>` in `index.html`, that is a required parameter, as it provides the location and size of the map view.
 * `MapView.setClickListener(onMapClicked);` sets a click listener to the map
 
- * Here' an example of onMapClicked and the data it provides: 
+ * Here's an example of onMapClicked and the data it provides: 
  
 		```
 		 function onMapClicked(clickInfo) {
@@ -69,17 +69,18 @@ Additionally, a Cordova Plugin consts of **2** main layers:
 
 `www/mapview.js` in this plugin that in turn calls native code, e.g.
 	
-	```
 	module.exports = {
 		registerLicense: function(license) {
 				cordova.exec(null, null, "CDMapView", "registerLicense", [license]);
 		}
 	};
-	```
-* The first two arguments, `null` in this example are success/failure callbacks.
+	
+	
+* The first two arguments, `null` in this example, are success/failure callbacks.
 
 
 #### Native
+
 * Java 
  * `src/android/CDMapView.java` contains the Java code that in turn calls our native SDK's functions
  * `public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException` is what receives all of the commands from the JavaScript module (args) and provides a callback context that can call `.success()` or `.error()`
