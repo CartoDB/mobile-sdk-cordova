@@ -96,8 +96,23 @@ There's no easy solution for debugging Cordova, that's why we've also included a
 
 ##### Android
 
+* Without a special plugin, only supported by Google Chrome
+* Open the following page: chrome://inspect/#devices
+* Click **Inspect** on the device that is currently running your Cordova application
+
+NB! You must click **Inspect** each time you start a new session (`cordova run android`)
+
 ##### iOS
 
+* Without a special plugin, only supported by Safari
+* Enable developer mode in Safari:
+ * Pull down the “Safari” menu and choose “Preferences”
+ * Click on the “Advanced” tab
+ * Check the box next to “Show Develop menu in menu bar”
+ * Close Preferences, the Develop menu will now be visible between Bookmarks and Window menus
+* `Develop > Simulator > index.html` opens the remote inspector
+ 
+ 
 #### Debugging Native
 
 ##### Android
