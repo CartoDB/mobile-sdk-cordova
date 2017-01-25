@@ -12,6 +12,12 @@ A general guide to installing cordova and creating a project can be found [here]
 * It is advised to also install Device plugin via `cordova plugin add cordova-plugin-device`, as CARTO's licenses are device-specific
 * This plugin also requires jQuery, download jQuery, place it in your `/js/` folder reference it via `<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>` in your project's `index.html` any time before `<script type="text/javascript" src="js/index.js"></script>`
 
+##### NB! If installing iOS plugin for the first time, you need to change compiler flags the Cordova project's XCode project
+
+* Open the workspace file (XCode) under `platforms/ios/HelloCordova/`, open build settings and make the following changes:
+
+  * Set `C++ Language Dialect` to `C++11`
+  * Set `C++ Standard Library` to `libc++`
 
 ### API
 * `MapView.registerLicense(YOUR_LICENSE);` registers the license, which is required to show the map.
