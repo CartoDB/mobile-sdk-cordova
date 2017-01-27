@@ -2,7 +2,7 @@
 
 CARTO's Mobile SDK Cordova Plugin
 
-** NB! This a proof of concept solution. It only features a small percentage of CARTO Mobile SDK's features. **
+**NB! This a proof of concept solution. It only features a small percentage of CARTO Mobile SDK's features.**
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ A general guide to installing cordova and creating a project can be found [here]
 
 ### API
 
-** NB! This a proof of concept solution. It implements only a small percentage of CARTO Mobile SDK's features. Other features can be added by you (please submit Pull Request!) or by us upon request **
+**NB! This a proof of concept solution. It implements only a small percentage of CARTO Mobile SDK's features. Other features can be added by you (please submit Pull Request!) or by us upon request**
 
 * `MapView.registerLicense(YOUR_LICENSE);` registers the license, which is required to show the map.
 * `MapView.initialize(mapView);` initializes the map with a default base layer. 
