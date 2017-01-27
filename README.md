@@ -1,6 +1,6 @@
 ## CARTO Cordova Plugin
 
-CARTO's Mobile SDK Cordova Plugin
+[CARTO Mobile maps SDK](https://carto.com/engine/mobile/) Plugin for Cordova/PhoneGAP platorm
 
 **NB! This a proof of concept solution. It only features a small percentage of CARTO Mobile SDK's features.**
 
