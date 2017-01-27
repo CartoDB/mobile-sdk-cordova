@@ -2,7 +2,7 @@
 
 CARTO's Mobile SDK Cordova Plugin
 
-###### NB! This a proof of concept solution. It only features a small percentage of CartoMobileSDK's full features. 
+** NB! This a proof of concept solution. It only features a small percentage of CARTO Mobile SDK's features. **
 
 ## Getting Started
 
@@ -22,6 +22,9 @@ A general guide to installing cordova and creating a project can be found [here]
   * Set `C++ Standard Library` to `libc++`
 
 ### API
+
+** NB! This a proof of concept solution. It implements only a small percentage of CARTO Mobile SDK's features. Other features can be added by you (please submit Pull Request!) or by us upon request **
+
 * `MapView.registerLicense(YOUR_LICENSE);` registers the license, which is required to show the map.
 * `MapView.initialize(mapView);` initializes the map with a default base layer. 
  * `mapView` is a html element, e.g. `<div class="mapView"></div>` in `index.html`, that is a required parameter, as it provides the location and size of the map view.
@@ -55,15 +58,15 @@ A general guide to installing cordova and creating a project can be found [here]
 		
 		```
 
-* `MapView.showPopup(longitude, latitude, title, description);` shows a **native Balloon popup** at coordinates with a title and a description.
+* `MapView.showPopup(longitude, latitude, title, description);` shows a **native SDK Balloon popup** at given map coordinates with a title and a description.
 
 ### Sample project
 
-We have a small sample project available [here](https://github.com/CartoDB/mobile-cordova-samples)
+* See [https://github.com/CartoDB/mobile-cordova-samples](https://github.com/CartoDB/mobile-cordova-samples)
 
 ## Contributing
 
-We're always looking for contributors for this plugin, as our main focus is providing a great SDK and we simply cannot find the time to offer full-time support for a Cordova Plugin.
+We're always looking for contributors for this plugin, please add your enhancements as Pull Request in github and feel free to post issues. Contact CARTO if you need full coverage of CARTO Mobile SDK for Cordova.
 
 ### Overview
 
@@ -71,7 +74,7 @@ A general overview of Cordova Plugin creation can be found [here](https://cordov
 
 The heart and soul of a plugin is `plugin.xml` that defines all the platforms that are supported, the classes and libraries that it contains.
 
-Additionally, a Cordova Plugin consts of **2** main layers:
+A method definition in Cordova Plugin consts of **two main layers**:
 
 #### A JavaScript module 
 
