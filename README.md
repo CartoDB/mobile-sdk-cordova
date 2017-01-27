@@ -2,6 +2,8 @@
 
 CARTO's Mobile SDK Cordova Plugin
 
+###### NB! This a proof of concept solution. It only features a small percentage of CartoMobileSDK's full features. 
+
 ## Getting Started
 
 A general guide to installing cordova and creating a project can be found [here](https://cordova.apache.org/docs/en/latest/guide/cli/)
